@@ -31,7 +31,6 @@ Partial Class Form1
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.QuitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -102,7 +101,6 @@ Partial Class Form1
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox64, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -226,28 +224,19 @@ Partial Class Form1
         Me.PictureBox9.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox9.BackgroundImage = Global.ChessNitro.My.Resources.Resources.tile9
         Me.PictureBox9.Image = Global.ChessNitro.My.Resources.Resources.bauer
-        Me.PictureBox9.Location = New System.Drawing.Point(30, 470)
+        Me.PictureBox9.Location = New System.Drawing.Point(29, 470)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(70, 67)
         Me.PictureBox9.TabIndex = 3
         Me.PictureBox9.TabStop = False
         Me.PictureBox9.Tag = "1"
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Black
-        Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Location = New System.Drawing.Point(100, 537)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(72, 80)
-        Me.Panel2.TabIndex = 5
-        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox2.BackgroundImage = Global.ChessNitro.My.Resources.Resources.tile1
         Me.PictureBox2.Image = Global.ChessNitro.My.Resources.Resources.springer2
-        Me.PictureBox2.Location = New System.Drawing.Point(3, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(103, 543)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(66, 72)
         Me.PictureBox2.TabIndex = 2
@@ -274,7 +263,7 @@ Partial Class Form1
         '
         Me.PictureBox3.BackgroundImage = Global.ChessNitro.My.Resources.Resources.tile17
         Me.PictureBox3.Image = Global.ChessNitro.My.Resources.Resources.laeufer_weiss
-        Me.PictureBox3.Location = New System.Drawing.Point(172, 539)
+        Me.PictureBox3.Location = New System.Drawing.Point(172, 540)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(65, 73)
         Me.PictureBox3.TabIndex = 36
@@ -450,7 +439,7 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImage = Global.ChessNitro.My.Resources.Resources.tile17
         Me.PictureBox1.Image = Global.ChessNitro.My.Resources.Resources.turm_weiss
-        Me.PictureBox1.Location = New System.Drawing.Point(29, 539)
+        Me.PictureBox1.Location = New System.Drawing.Point(28, 540)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(72, 71)
         Me.PictureBox1.TabIndex = 20
@@ -650,6 +639,7 @@ Partial Class Form1
         Me.PictureBox19.Size = New System.Drawing.Size(65, 66)
         Me.PictureBox19.TabIndex = 42
         Me.PictureBox19.TabStop = False
+        Me.PictureBox19.Tag = "0"
         '
         'PictureBox20
         '
@@ -659,6 +649,7 @@ Partial Class Form1
         Me.PictureBox20.Size = New System.Drawing.Size(65, 66)
         Me.PictureBox20.TabIndex = 43
         Me.PictureBox20.TabStop = False
+        Me.PictureBox20.Tag = "0"
         '
         'PictureBox21
         '
@@ -668,6 +659,7 @@ Partial Class Form1
         Me.PictureBox21.Size = New System.Drawing.Size(68, 66)
         Me.PictureBox21.TabIndex = 44
         Me.PictureBox21.TabStop = False
+        Me.PictureBox21.Tag = "0"
         '
         'PictureBox22
         '
@@ -677,6 +669,7 @@ Partial Class Form1
         Me.PictureBox22.Size = New System.Drawing.Size(67, 66)
         Me.PictureBox22.TabIndex = 45
         Me.PictureBox22.TabStop = False
+        Me.PictureBox22.Tag = "0"
         '
         'PictureBox23
         '
@@ -686,6 +679,7 @@ Partial Class Form1
         Me.PictureBox23.Size = New System.Drawing.Size(67, 66)
         Me.PictureBox23.TabIndex = 46
         Me.PictureBox23.TabStop = False
+        Me.PictureBox23.Tag = "0"
         '
         'PictureBox24
         '
@@ -695,6 +689,7 @@ Partial Class Form1
         Me.PictureBox24.Size = New System.Drawing.Size(75, 66)
         Me.PictureBox24.TabIndex = 47
         Me.PictureBox24.TabStop = False
+        Me.PictureBox24.Tag = "0"
         '
         'PictureBox25
         '
@@ -704,6 +699,7 @@ Partial Class Form1
         Me.PictureBox25.Size = New System.Drawing.Size(72, 69)
         Me.PictureBox25.TabIndex = 48
         Me.PictureBox25.TabStop = False
+        Me.PictureBox25.Tag = "0"
         '
         'PictureBox26
         '
@@ -713,6 +709,7 @@ Partial Class Form1
         Me.PictureBox26.Size = New System.Drawing.Size(66, 69)
         Me.PictureBox26.TabIndex = 49
         Me.PictureBox26.TabStop = False
+        Me.PictureBox26.Tag = "0"
         '
         'PictureBox27
         '
@@ -732,6 +729,7 @@ Partial Class Form1
         Me.PictureBox28.Size = New System.Drawing.Size(65, 69)
         Me.PictureBox28.TabIndex = 51
         Me.PictureBox28.TabStop = False
+        Me.PictureBox28.Tag = "0"
         '
         'PictureBox29
         '
@@ -741,6 +739,7 @@ Partial Class Form1
         Me.PictureBox29.Size = New System.Drawing.Size(68, 69)
         Me.PictureBox29.TabIndex = 52
         Me.PictureBox29.TabStop = False
+        Me.PictureBox29.Tag = "0"
         '
         'PictureBox30
         '
@@ -750,6 +749,7 @@ Partial Class Form1
         Me.PictureBox30.Size = New System.Drawing.Size(67, 69)
         Me.PictureBox30.TabIndex = 53
         Me.PictureBox30.TabStop = False
+        Me.PictureBox30.Tag = "0"
         '
         'PictureBox31
         '
@@ -759,6 +759,7 @@ Partial Class Form1
         Me.PictureBox31.Size = New System.Drawing.Size(67, 69)
         Me.PictureBox31.TabIndex = 54
         Me.PictureBox31.TabStop = False
+        Me.PictureBox31.Tag = "0"
         '
         'PictureBox32
         '
@@ -768,6 +769,7 @@ Partial Class Form1
         Me.PictureBox32.Size = New System.Drawing.Size(75, 69)
         Me.PictureBox32.TabIndex = 55
         Me.PictureBox32.TabStop = False
+        Me.PictureBox32.Tag = "0"
         '
         'PictureBox33
         '
@@ -777,6 +779,7 @@ Partial Class Form1
         Me.PictureBox33.Size = New System.Drawing.Size(72, 66)
         Me.PictureBox33.TabIndex = 56
         Me.PictureBox33.TabStop = False
+        Me.PictureBox33.Tag = "0"
         '
         'PictureBox34
         '
@@ -786,6 +789,7 @@ Partial Class Form1
         Me.PictureBox34.Size = New System.Drawing.Size(66, 66)
         Me.PictureBox34.TabIndex = 57
         Me.PictureBox34.TabStop = False
+        Me.PictureBox34.Tag = "0"
         '
         'PictureBox35
         '
@@ -795,6 +799,7 @@ Partial Class Form1
         Me.PictureBox35.Size = New System.Drawing.Size(65, 66)
         Me.PictureBox35.TabIndex = 58
         Me.PictureBox35.TabStop = False
+        Me.PictureBox35.Tag = "0"
         '
         'PictureBox36
         '
@@ -804,6 +809,7 @@ Partial Class Form1
         Me.PictureBox36.Size = New System.Drawing.Size(65, 66)
         Me.PictureBox36.TabIndex = 59
         Me.PictureBox36.TabStop = False
+        Me.PictureBox36.Tag = "0"
         '
         'PictureBox37
         '
@@ -813,6 +819,7 @@ Partial Class Form1
         Me.PictureBox37.Size = New System.Drawing.Size(68, 66)
         Me.PictureBox37.TabIndex = 60
         Me.PictureBox37.TabStop = False
+        Me.PictureBox37.Tag = "0"
         '
         'PictureBox38
         '
@@ -822,6 +829,7 @@ Partial Class Form1
         Me.PictureBox38.Size = New System.Drawing.Size(67, 66)
         Me.PictureBox38.TabIndex = 61
         Me.PictureBox38.TabStop = False
+        Me.PictureBox38.Tag = "0"
         '
         'PictureBox39
         '
@@ -831,6 +839,7 @@ Partial Class Form1
         Me.PictureBox39.Size = New System.Drawing.Size(67, 66)
         Me.PictureBox39.TabIndex = 62
         Me.PictureBox39.TabStop = False
+        Me.PictureBox39.Tag = "0"
         '
         'PictureBox40
         '
@@ -840,6 +849,7 @@ Partial Class Form1
         Me.PictureBox40.Size = New System.Drawing.Size(75, 66)
         Me.PictureBox40.TabIndex = 63
         Me.PictureBox40.TabStop = False
+        Me.PictureBox40.Tag = "0"
         '
         'PictureBox41
         '
@@ -929,12 +939,14 @@ Partial Class Form1
         Me.PictureBox18.Size = New System.Drawing.Size(66, 66)
         Me.PictureBox18.TabIndex = 41
         Me.PictureBox18.TabStop = False
+        Me.PictureBox18.Tag = "0"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(782, 755)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox48)
         Me.Controls.Add(Me.PictureBox47)
@@ -1002,7 +1014,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox500)
         Me.Controls.Add(Me.PictureBox17)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox100)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "Form1"
@@ -1010,7 +1021,6 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox64, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1091,7 +1101,6 @@ Partial Class Form1
     Friend WithEvents PictureBox100 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox500 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
