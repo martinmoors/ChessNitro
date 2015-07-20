@@ -11,12 +11,14 @@
     Dim x As Integer
     Dim y As Integer
     Dim tag As Integer
-    ' Dim chessFields(,) As PictureBox
+    Dim testArray() As Integer
+    Dim clickedY As Integer
 
     Public Sub New()
         Me.InitializeComponent()
-        
-        'blk = New PictureBox() {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7, PictureBox8, PictureBox9, PictureBox10, PictureBox11, PictureBox12, PictureBox13, PictureBox14, PictureBox15, PictureBox16, PictureBox17, PictureBox18, PictureBox19, PictureBox20, PictureBox21, PictureBox22, PictureBox23, PictureBox24, PictureBox25, PictureBox26, PictureBox27, PictureBox28, PictureBox29, PictureBox30, PictureBox31, PictureBox32, PictureBox33, PictureBox34, PictureBox35, PictureBox36, PictureBox37, PictureBox38, PictureBox39, PictureBox40, PictureBox41, PictureBox42, PictureBox43, PictureBox44, PictureBox45, PictureBox46, PictureBox47, PictureBox48, PictureBox49, PictureBox50, PictureBox51, PictureBox52, PictureBox53, PictureBox54, PictureBox55, PictureBox56, PictureBox57, PictureBox58, PictureBox59, PictureBox60, PictureBox61, PictureBox62, PictureBox63, PictureBox64}
+
+        refreshBoard()
+
         Dim posMovesWhite As New Hashtable()
 
         posMovesWhite.Add(1.1, {0, 1})
@@ -50,23 +52,17 @@
         posMovesWhite.Add(6.7, {-1, 0})
         posMovesWhite.Add(6.8, {-1, 1})
 
-
-        If (whiteTurn) Then
-
-        Else
-
-        End If
     End Sub
 
     Sub MyMultipleEventHandler(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click, PictureBox2.Click, PictureBox3.Click, PictureBox4.Click, PictureBox5.Click, PictureBox6.Click, PictureBox7.Click, PictureBox8.Click, PictureBox9.Click, PictureBox10.Click, PictureBox11.Click, PictureBox12.Click, PictureBox13.Click, PictureBox14.Click, PictureBox15.Click, PictureBox16.Click, PictureBox17.Click, PictureBox18.Click, PictureBox19.Click, PictureBox20.Click, PictureBox21.Click, PictureBox22.Click, PictureBox23.Click, PictureBox24.Click, PictureBox25.Click, PictureBox26.Click, PictureBox27.Click, PictureBox28.Click, PictureBox29.Click, PictureBox30.Click, PictureBox31.Click, PictureBox32.Click, PictureBox33.Click, PictureBox34.Click, PictureBox35.Click, PictureBox36.Click, PictureBox37.Click, PictureBox38.Click, PictureBox39.Click, PictureBox40.Click, PictureBox41.Click, PictureBox42.Click, PictureBox43.Click, PictureBox44.Click, PictureBox45.Click, PictureBox46.Click, PictureBox47.Click, PictureBox48.Click, PictureBox49.Click, PictureBox50.Click, PictureBox51.Click, PictureBox52.Click, PictureBox53.Click, PictureBox54.Click, PictureBox55.Click, PictureBox56.Click, PictureBox57.Click, PictureBox58.Click, PictureBox59.Click, PictureBox60.Click, PictureBox61.Click, PictureBox62.Click, PictureBox63.Click, PictureBox64.Click
         Dim thisPic As PictureBox = DirectCast(sender, PictureBox)
+
         array = game.getBoard()
         If (numClick.Equals(1)) Then
             Select Case thisPic.Name
                 Case "PictureBox9"
                     x = 0
                     y = 1
-                    tag = thisPic.Tag
                 Case "PictureBox10"
                     x = 1
                     y = 1
@@ -75,6 +71,7 @@
                     x = 0
                     y = 2
                     tag = thisPic.Tag
+                    clickedY = 2
                 Case "PictureBox18"
                     x = 1
                     y = 2
@@ -99,110 +96,171 @@
                     x = 0
                     y = 5
                     tag = thisPic.Tag
+                Case "PictureBox42"
+                    x = 1
+                    y = 5
+                    tag = thisPic.Tag
             End Select
-            thisPic.Tag = 0
+            ' If (array(y + 1, x) = 0) Then
+            'thisPic.Tag = 0
+            'End If
             numClick = 2
         ElseIf (numClick.Equals(2)) Then
-            If (array(y, x) = 0) Then
-                Select Case thisPic.Name
-                    Case "PictureBox9"
-                        Select Case x
-                            Case 0
-                                game.move(0, 2, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
-                        End Select
-                    Case "PictureBox17"
-                        Select Case x
-                            Case 0
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
-                        End Select
-                    Case "PictureBox18"
-                        Select Case x
-                            Case 1
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                        End Select
-                    Case "PictureBox25"
-                        Select Case x
-                            Case 0
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
-                        End Select
-                    Case "PictureBox26"
-                        Select Case x
-                            Case 1
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
-                        End Select
-                    Case "PictureBox33"
-                        Select Case x
-                            Case 0
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
 
-                        End Select
-                    Case "PictureBox34"
-                        Select Case x
-                            Case 1
+            Select Case thisPic.Name
+                Case "PictureBox9"
+                    Select Case thisPic.Tag
+                        Case 1
+                            Select Case x
+                                Case 0
+                                    x = 0
+                                    y = 1
+                                    game.move(x, y, tag)
+                                    array = game.getBoard
+                                    refreshBoard()
+                                Case Else
+                            End Select
+                    End Select
+                Case "PictureBox17"
+                    Select Case thisPic.Tag
+                        Case 0
+                            Select Case x
+                                Case 0
+                                    x = 0
+                                    y = 2
+                                    game.move(x, y, tag)
+                                    array = game.getBoard
+                                    refreshBoard()
+                                Case Else
+                            End Select
+                    End Select
+                Case "PictureBox18"
+                    Select Case x
+                        Case 1
+                            x = 1
+                            y = 2
+                            game.move(x, y, tag)
+                            array = game.getBoard
+                            refreshBoard()
+                    End Select
+                Case "PictureBox25"
+                    Select Case x
+                        Case 0
+                            x = 0
+                            y = 3
+                            If (y >= clickedY) Then
                                 game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
+                            End If
+                            array = game.getBoard
+                            refreshBoard()
+                        Case Else
+                    End Select
+                Case "PictureBox26"
+                    Select Case x
+                        Case 1
+                            x = 1
+                            y = 3
+                            game.move(x, y, tag)
+                            array = game.getBoard
+                            refreshBoard()
+                        Case Else
+                    End Select
+                Case "PictureBox33"
+                    Select Case thisPic.Tag
+                        Case 0
+                            Select Case x
+                                Case 0
+                                    x = 0
+                                    y = 4
+                                    game.move(x, y, tag)
+                                    array = game.getBoard
+                                    refreshBoard()
+                                Case Else
+                            End Select
+                    End Select
+                Case "PictureBox34"
+                    Select Case x
+                        Case 1
+                            game.move(x, y, tag)
+                            thisPic.Tag = 1
+                            array = game.getBoard
+                            refreshBoard()
+                        Case Else
+                    End Select
+                Case "PictureBox41"
+                    Select Case x
+                        Case 0
+                            x = 0
+                            y = 5
+                            game.move(x, y, tag)
+                            thisPic.Tag = 1
+                            array = game.getBoard
+                            refreshBoard()
+                        Case Else
+                    End Select
+                Case "PictureBox42"
+                    Select Case x
+                        Case 1
+                            game.move(x, y, tag)
+                            thisPic.Tag = 1
+                            array = game.getBoard
+                            refreshBoard()
+                        Case Else
+                    End Select
+                Case "PictureBox49"
+                    Select Case x
+                        Case 0
+                            x = 0
+                            y = 6
+                            game.move(x, y, tag)
+                            thisPic.Tag = 1
+                            array = game.getBoard
+                            refreshBoard()
+                        Case Else
+                    End Select
+                Case "PictureBox50"
+                    Select Case x
+                        Case 1
+                            array = game.getBoard
 
-                        End Select
-                    Case "PictureBox41"
-                        Select Case x
-                            Case 0
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
-                        End Select
-                    Case "PictureBox42"
-                        Select Case x
-                            Case 1
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
-                        End Select
-                    Case "PictureBox49"
-                        Select Case x
-                            Case 0
-                                game.move(x, y, tag)
-                                thisPic.Tag = 1
-                                array = game.getBoard
-                                refreshBoard()
-                            Case Else
-                        End Select
-                End Select
-                numClick = 1
-            End If
+                            game.move(x, y, tag)
+
+                            thisPic.Tag = 1
+
+                            array = game.getBoard
+                            refreshBoard()
+                        Case Else
+                    End Select
+            End Select
+            numClick = 1
         End If
     End Sub
 
     Private Sub refreshBoard()
+        array = game.getBoard
+        Dim array1D(84) As Integer
+        Dim index As Integer
+        index = 0
+        For Each item In array
+            array1D(index) = item
+            index += 1
+        Next
+        index = 0
+
+        For Each cntrl As Control In Me.Controls
+
+            Dim result As Integer
+
+            If TypeOf cntrl Is PictureBox Then
+                If Integer.TryParse(cntrl.Tag, result) Then
+                    If Not cntrl.Tag.Equals("100") Then
+                        CType(cntrl, PictureBox).Tag = array1D(index)
+                        index += 1
+                    End If
+                End If
+            End If
+        Next
+
         For row = 0 To 7
             For col = 0 To 7
                 Debug.Write(array(row, col) & " ")
@@ -229,47 +287,47 @@
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.bauer
                                     End If
                                 Case 2
-                                    If cntrl.Tag.Equals("2") Then
+                                    If cntrl.Tag = 2 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.springer
                                     End If
                                 Case 3
-                                    If cntrl.Tag.Equals("3") Then
+                                    If cntrl.Tag = 3 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.laeufer_weiss
                                     End If
                                 Case 4
-                                    If cntrl.Tag.Equals("4") Then
+                                    If cntrl.Tag = 4 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.turm_weiss
                                     End If
                                 Case 5
-                                    If cntrl.Tag.Equals("5") Then
+                                    If cntrl.Tag = 5 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.koenigin
                                     End If
                                 Case 6
-                                    If cntrl.Tag.Equals("6") Then
+                                    If cntrl.Tag = 6 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.koenigin_schwarz
                                     End If
                                 Case 7
-                                    If cntrl.Tag.Equals("7") Then
+                                    If cntrl.Tag = 7 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.bauer_schwarz
                                     End If
                                 Case 8
-                                    If cntrl.Tag.Equals("8") Then
+                                    If cntrl.Tag = 8 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.springer_schwarz
                                     End If
                                 Case 9
-                                    If cntrl.Tag.Equals("9") Then
+                                    If cntrl.Tag = 9 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.laeufer
                                     End If
                                 Case 10
-                                    If cntrl.Tag.Equals("10") Then
+                                    If cntrl.Tag = 10 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.turm
                                     End If
                                 Case 11
-                                    If cntrl.Tag.Equals("11") Then
+                                    If cntrl.Tag = 11 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.koenigin2_schwarz
                                     End If
                                 Case 12
-                                    If cntrl.Tag.Equals("12") Then
+                                    If cntrl.Tag = 12 Then
                                         CType(cntrl, PictureBox).Image = Global.ChessNitro.My.Resources.Resources.koenig
                                     End If
                             End Select
@@ -278,6 +336,7 @@
                 End If
             Next
         Next
+
     End Sub
 
     Private Sub newGame_Click(sender As Object, e As EventArgs) Handles newGame.Click
